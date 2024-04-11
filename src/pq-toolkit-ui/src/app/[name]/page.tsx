@@ -31,7 +31,7 @@ const WelcomeContent = async ({
   if (data == null) return <Loading />
 
   return (
-    <div className="bg-white rounded-md p-lg flex flex-col items-center text-black">
+    <div className="bg-slate-800 rounded-md p-lg flex flex-col items-center text-grey">
       <div className="text-lg">
         Welcome to experiment <b>{data.name}</b>
       </div>
@@ -43,8 +43,15 @@ const WelcomeContent = async ({
           </button>
         </Link>
       </div>
+      <div
+          className="relative before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:-translate-y-1/2 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]
+        text-center mt-auto"
+        >
+      
+      </div>
     </div>
   )
 }
 
 export default ExperimentWelcomePage
+

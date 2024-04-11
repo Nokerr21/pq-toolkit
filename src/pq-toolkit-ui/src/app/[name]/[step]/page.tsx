@@ -116,32 +116,38 @@ const TestPage = ({
 
   return (
     <div className="min-h-screen flex flex-col items-center">
-      <h1 className="text-xl font-semibold pt-md mt-auto">Test #{step}</h1>
-      <div className="mb-auto mt-md">
-        {getTestComponent()}
-        <div className="flex justify-center mt-md gap-sm">
-          {step > 1 && (
-            <Link href={(step - 1).toString()}>
-              <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
-                Previous
-              </button>
-            </Link>
-          )}
-          {step === tests.length ? (
-            <Link href="finish" onClick={saveResults}>
-              <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
-                Finish
-              </button>
-            </Link>
-          ) : (
-            <Link href={(step + 1).toString()}>
-              <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
-                Next
-              </button>
-            </Link>
-          )}
-        </div>
+      <div
+          className="relative before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:-translate-y-1/2 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]
+        text-center mt-auto"
+        >
+        <h1 className="text-5xl font-semibold pt-md mt-auto">Test #{step}</h1>
       </div>
+        <div className="mb-auto mt-md">
+          {getTestComponent()}
+          <div className="flex justify-center mt-md gap-sm">
+            {step > 1 && (
+              <Link href={(step - 1).toString()}>
+                <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
+                  Previous
+                </button>
+              </Link>
+            )}
+            {step === tests.length ? (
+              <Link href="finish" onClick={saveResults}>
+                <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
+                  Finish
+                </button>
+              </Link>
+            ) : (
+              <Link href={(step + 1).toString()}>
+                <button className="bg-blue-500 rounded-md p-xs font-semibold text-white">
+                  Next
+                </button>
+              </Link>
+            )}
+          </div>
+        </div>
+      
     </div>
   )
 }
