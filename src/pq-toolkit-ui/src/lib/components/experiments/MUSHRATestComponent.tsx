@@ -115,7 +115,7 @@ const MUSHRATestComponent = ({
   }
 
   return (
-    <div className="bg-slate-800 rounded-md p-lg flex flex-col items-center text-black">
+    <div className="bg-slate-800 rounded-md p-lg flex flex-col items-center text-white">
       <div className="flex flex-col gap-md">
         <div className="flex flex-col gap-xs">
           <div className="text-center">{question}</div>
